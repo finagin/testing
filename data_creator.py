@@ -34,3 +34,9 @@ class DataRead:
     def __init__(self, file_name):
         f = open(file_name + '.json', 'r')
         self.data = json.loads(f.read())
+
+    def auth(self, item):
+        return self.data["auth"][item]
+
+    def issue(self):
+        return self.data["issues"]
